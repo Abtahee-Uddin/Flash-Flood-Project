@@ -1,0 +1,299 @@
+.panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  bottom: 12px;
+  width: 280px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  box-shadow: -4px 0 32px rgba(0,0,0,0.5);
+  animation: fade-in-up 0.2s ease;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid;
+}
+
+.assetType {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--asset-color, var(--accent-blue));
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.closeBtn:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Name */
+.nameBlock {}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.coords {
+  display: flex;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Risk Badge */
+.riskBadge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.riskBadgeLabel {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.riskBadgeScore {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ETA */
+.etaBlock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 3px;
+}
+
+.etaLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.etaValue {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: #ef4444;
+}
+
+/* Impact */
+.impactBlock {
+  padding: 8px 10px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.impactLabel {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.impactText {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Section */
+.section {
+  border-top: 1px solid var(--border-dim);
+  padding-top: 10px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Model breakdown */
+.metricRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.metricBar {
+  flex: 1;
+  height: 4px;
+  background: var(--border-dim);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metricBarFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.metricVal {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  width: 30px;
+  text-align: right;
+}
+
+.formula {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  padding: 5px 8px;
+  background: var(--bg-primary);
+  border-radius: 3px;
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+}
+
+/* Conditions grid */
+.condGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border-dim);
+  border: 1px solid var(--border-dim);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.condCell {
+  background: var(--bg-card);
+  padding: 7px 8px;
+}
+
+.condLabel {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.condValue {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.condValue span {
+  font-size: 9px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Mini chart */
+.miniChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 60px;
+}
+
+.miniBar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  height: 100%;
+}
+
+.miniBarFill {
+  width: 100%;
+  border-radius: 1px 1px 0 0;
+  min-height: 3px;
+  transition: height 0.3s;
+}
+
+.miniBarHour {
+  font-family: var(--font-mono);
+  font-size: 6px;
+  color: var(--text-muted);
+}

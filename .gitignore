@@ -1,0 +1,23 @@
+# ── Node ──────────────────────────────────────────────
+node_modules/
+dist/
+.vite/
+
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+
+# ── Pipeline-generated files (recreated each run) ─────
+server/eta.tif
+server/max_risk.tif
+server/street.geojson
+
+
+# ── OS / editor ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+*.log
